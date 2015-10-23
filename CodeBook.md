@@ -28,6 +28,7 @@ More knowledge about that found here:  http://www.rexegg.com/regex-quickstart.ht
 * `SITTING` (`4`): indicates subject was sitting 
 * `STANDING` ( `5`): indicates subject was standing
 * `LAYING` (`6`): indicates subject was laying down 
-##Final Labels
+
+## Final Labels
 The final labels and data indicate the average of those measurements which indicate mean/standard deviation....Its the 'final_clean_dataset.txt' file committed here.The data may be used for further exploratory analysis.
 
