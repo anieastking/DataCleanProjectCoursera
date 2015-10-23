@@ -16,8 +16,9 @@ analysis. A full description of the data used in this project can be found at [T
 (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
 ##Measurements
-The Kept measurements are the one which calculate the mean or standard deviation..they are done using the grep command,
+The retained measurements are the ones which calculate the mean or standard deviation..they are done using the 'grep' command,
 which requires REGEX expression knowledge
+More knowledge about that found here:  http://www.rexegg.com/regex-quickstart.html
 ## Activity Labels
 
 * `WALKING` ( `1`):indicates  subject was walking during the test
