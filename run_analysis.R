@@ -1,14 +1,14 @@
 run_analysis<-function(directory){
   library(dplyr)
   #1.......Merging the tiresome datasets/////
-   X_train<-read.table("C:/Users/hp/Documents/datascience/UCI/train/X_train.txt")
-   y_train<-read.table("C:/Users/hp/Documents/datascience/UCI/train/y_train.txt")
-   subject_train<-read.table("C:/Users/hp/Documents/datascience/UCI/train/subject_train.txt")
+   X_train<-read.table("train/X_train.txt")
+   y_train<-read.table("train/y_train.txt")
+   subject_train<-read.table("train/subject_train.txt")
  #  print(subject_train)
    
-   X_test<-read.table("C:/Users/hp/Documents/datascience/UCI/test/X_test.txt")
-   y_test<-read.table("C:/Users/hp/Documents/datascience/UCI/test/y_test.txt")
-   subject_test<-read.table("C:/Users/hp/Documents/datascience/UCI/test/subject_test.txt")
+   X_test<-read.table("test/X_test.txt")
+   y_test<-read.table("test/y_test.txt")
+   subject_test<-read.table("test/subject_test.txt")
    ##print(subject_test)
    ##joining data
    X_joined<-rbind(X_train,X_test)
@@ -19,7 +19,7 @@ run_analysis<-function(directory){
    
    #2...read the features table and extract mean and standard deviation data
    
-   features<-read.table("C:/Users/hp/Documents/datascience/UCI/features.txt")
+   features<-read.table("features.txt")
    
    
    ###now the main thing,,,,get indices of only that from features that has mean or std in it as substrings
@@ -35,7 +35,7 @@ run_analysis<-function(directory){
    
    #3..Replace integers by names in y_joined
    
-   act_labels<-read.table("C:/Users/hp/Documents/datascience/UCI/activity_labels.txt")
+   act_labels<-read.table("activity_labels.txt")
    
    y_joined[,1]<-act_labels[y_joined[,1],2]
    
@@ -49,7 +49,7 @@ run_analysis<-function(directory){
    ##5...
          ##     making tidy data set and creating TXT FILE
    tidy<-aggregate(k[,1:66],list(k$Activity_name,k$Subject_number),mean)
-   write.table(tidy,"C:/Users/hp/Documents/datascience/UCI/final_clean_dataset.txt",row.names = FALSE,sep="\t")
+   write.table(tidy,"final_clean_dataset.txt",row.names = FALSE,sep="\t")
    
   
 }
