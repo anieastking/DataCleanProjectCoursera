@@ -21,6 +21,9 @@ To run this:::
 
 Resultant .txt file is final_clean_dataset.txt
 
+###Important
+
+Since I have written run_analysis as a function...you need to run 'run_analysis("")' in your console again(no use of directory here.Included it for portability).
 
 Note that REGEX expressions can be learned from here:
 http://www.rexegg.com/regex-quickstart.html
