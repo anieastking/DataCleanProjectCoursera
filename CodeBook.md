@@ -1,5 +1,6 @@
 # Code Book
-  Aniruddha Bhattacharya
+By Aniruddha Bhattacharya.
+
 This code book describes columns in `final_clean_dataset.txt`.
 
 ## Identifiers
